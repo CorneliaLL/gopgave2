@@ -4,10 +4,11 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from '@react-native-vector-icons/ionicons';
 import HomeStack from './navigation/HomeStack';
 import MyBookingsScreen from './screens/MyBookingsScreen';
+import WishlistScreen from './screens/WishlistScreen';
 import ChatScreen from './screens/ChatScreen';
 import { GlobalStyles, Colors } from './GlobalStyles';
 
-//opretter Tab Navigatoren, som er selve bunden af appen med de tre faner
+//opretter Tab Navigatoren, som er selve bunden af appen med fanerne
 const Tab = createBottomTabNavigator();
 
 //alt booking data ligger øverst i appen og sendes som props
@@ -27,8 +28,8 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-          screenOptions={({ route }) => ({
-          //farver og styling hentes fra GlobalStyles, så al styling ligger samlet et sted
+        screenOptions={({ route }) => ({
+          //farver og styling hentes fra GlobalStyles
           headerStyle: GlobalStyles.header,
           headerTitleStyle: GlobalStyles.headerTitle,
           headerTintColor: Colors.textLight,
@@ -43,6 +44,8 @@ export default function App() {
               iconName = focused ? 'home' : 'home-outline';
             } else if (route.name === 'Mine bookinger') {
               iconName = focused ? 'calendar' : 'calendar-outline';
+            } else if (route.name === 'Ønskeliste') {
+              iconName = focused ? 'heart' : 'heart-outline';
             } else if (route.name === 'Chat') {
               iconName = focused ? 'chatbubble' : 'chatbubble-outline';
             }
@@ -50,8 +53,7 @@ export default function App() {
           },
         })}
       >
-        {/* oversigt fanen er selve HomeStack (Stack Navigator), 
-        header skjules da HomeStack allerede har sin egen header */}
+        {/* oversigt fanen er selve HomeStack (Stack Navigator)*/}
         <Tab.Screen name="Oversigt" options={{ headerShown: false }}>
           {(props) => <HomeStack {...props} addBooking={addBooking} />}
         </Tab.Screen>
@@ -61,7 +63,10 @@ export default function App() {
           {(props) => <MyBookingsScreen {...props} bookinger={bookinger} removeBooking={removeBooking} />}
         </Tab.Screen>
 
-        {/*ChatScreen har ikke brug for delt state så den bruges direkte med component */}
+        {/* ny fane til ønskelisten, henter selv sine data fra Firebase */}
+        <Tab.Screen name="Ønskeliste" component={WishlistScreen} />
+
+        {/* ChatScreen bruges direkte med component */}
         <Tab.Screen name="Chat" component={ChatScreen} />
       </Tab.Navigator>
     </NavigationContainer>

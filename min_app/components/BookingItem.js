@@ -18,7 +18,13 @@ export default function BookingItem({ booking, onCancel }) {
           <Text style={GlobalStyles.bookingItemComment}>{booking.kommentar}</Text>
         ) : null}
 
+        {/* ønskelisten vises kun, hvis kunden har vedhæftet den */}
+        {booking.wishlist.length > 0 ? (
+          <Text style={GlobalStyles.bookingItemComment}>Ønskeliste: {booking.wishlist.join(', ')}</Text>
+        ) : null}
+
       </View>
+      
       {/* annuller knappen sender bookingens id videre til onCancel, som fjerner den fra listen */}
       <ButtonComponent title="Annullér" variant="secondary" onPress={() => onCancel(booking.id)} />
     </View>

@@ -28,7 +28,7 @@ export const GlobalStyles = StyleSheet.create({
     letterSpacing: 1,
   },
 
-    //header øverst på skærmene (bruges i App.js)
+  //header øverst på skærmene 
   header: {
     backgroundColor: Colors.primary,
   },
@@ -40,7 +40,7 @@ export const GlobalStyles = StyleSheet.create({
     letterSpacing: 1,
   },
 
-  //tab bar i bunden af appen (bruges i App.js)
+  //tab bar i bunden af appen 
   tabBar: {
     backgroundColor: Colors.background,
     borderTopWidth: 1,
@@ -75,6 +75,7 @@ export const GlobalStyles = StyleSheet.create({
     padding: 20,
     marginTop: 10,
   },
+
   inputLabel: {
     fontSize: 13,
     fontWeight: '600',
@@ -83,6 +84,7 @@ export const GlobalStyles = StyleSheet.create({
     marginBottom: 6,
     textTransform: 'uppercase',
     letterSpacing: 0.5,
+
   },
   textInput: {
     height: 44,
@@ -93,6 +95,17 @@ export const GlobalStyles = StyleSheet.create({
     backgroundColor: '#FFFFFF',
     fontSize: 15,
     color: '#000000',
+  },
+
+  //søgefeltet øverst i kollektionen
+  searchInput: {
+    height: 44,
+    borderColor: Colors.primary,
+    borderWidth: 1,
+    borderRadius: 4,
+    paddingLeft: 12,
+    fontSize: 15,
+    marginBottom: 12,
   },
 
   //rækken med Fashion Advisor knapperne i formularen
@@ -123,6 +136,7 @@ export const GlobalStyles = StyleSheet.create({
     justifyContent: 'space-between',
     alignItems: 'center',
   },
+
   bookingItemText: {
     fontSize: 15,
     color: '#000000',
@@ -134,6 +148,48 @@ export const GlobalStyles = StyleSheet.create({
   bookingItemComment: {
     fontSize: 13,
     color: '#555555',
+    marginTop: 4,
+  },
+
+  //rækken med kategori knapperne (tasker, sko, smykker) øverst i kollektionen
+  categoryRow: {
+    flexDirection: 'row',
+    gap: 8,
+    marginBottom: 16,
+  },
+
+  //boks rundt om et produkt: billede til venstre og tekst til højre med sort kant som bookinger
+  productCard: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: Colors.background,
+    borderWidth: 1,
+    borderColor: Colors.primary,
+    borderRadius: 4,
+    padding: 12,
+    marginBottom: 10,
+    gap: 12,
+  },
+
+  //produktbilledet fra API'et
+  productImage: {
+    width: 70,
+    height: 70,
+    borderRadius: 4,
+  },
+
+  //produktnavnet med fed sort tekst
+  productTitle: {
+    fontSize: 15,
+    fontWeight: '600',
+    color: Colors.primary,
+    marginTop: 2,
+  },
+
+  //prisen med grå tekst under navnet
+  productPrice: {
+    fontSize: 14,
+    color: Colors.textGrey,
     marginTop: 4,
   },
 
@@ -165,6 +221,7 @@ export const GlobalStyles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  
   secondaryBtnText: {
     color: '#000000',
     fontSize: 14,

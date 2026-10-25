@@ -3,7 +3,7 @@ import { View, FlatList, Text } from 'react-native';
 import BookingItem from '../components/BookingItem';
 import { GlobalStyles } from '../GlobalStyles';
 
-//viser listen over brugerens bookinger (fanen "Mine bookinger")
+//viser listen over brugerens bookinger 
 export default function MyBookingsScreen({ bookinger, removeBooking }) {
   return (
     <View style={GlobalStyles.screenContainer}>

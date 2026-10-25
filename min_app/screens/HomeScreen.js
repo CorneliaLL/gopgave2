@@ -11,7 +11,7 @@ export default function HomeScreen({ navigation }) {
 
     {/* navigerer til "Book tid" screen, som er sat op i HomeStack.js */}
       <OptionCard title="Book tid" onPress={() => navigation.navigate('Book tid')} />
-      <OptionCard title="Se nyeste kollektioner" onPress={() => {}} />
+      <OptionCard title="Se nyeste kollektioner" onPress={() => navigation.navigate('Kollektion')} />
       <OptionCard title="Info om arrangementer" onPress={() => {}} />
       <OptionCard title="Allure's anbefalinger" onPress={() => {}} />
     </View>

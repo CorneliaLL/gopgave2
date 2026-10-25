@@ -8,14 +8,14 @@ En mobilapplikation bygget i React Native (Expo) til booking af tid hos en Fashi
 - **Kategorier og søgning:** kunden kan skifte mellem tasker, sko og smykker og søge efter produkter
 - **Ønskeliste:** kunden kan gemme produkter med "Gem". Ønskelisten gemmes i Firebase Realtime Database
 - **Vedhæft ønskeliste til booking:** i bookingformularen kan kunden vedhæfte sin ønskeliste, som derefter vises på bookingen under "Mine bookinger"
-- **Styling:** farverne til faner og header er flyttet til `GlobalStyles.js` ( ud fra feedback i G-opgave 1)
+- **Styling:** farverne til faner og header er flyttet til `GlobalStyles.js` (ud fra feedback i G-opgave 1)
 
 ## Funktioner
 - Oversigt med information og genveje
 - Se nyeste kollektioner med kategorier og søgning
 - Gem og fjern produkter på en ønskeliste
 - Book en tid hos en valgt Fashion Advisor, med mulighed for at vedhæfte ønskelisten
-- Se og annullér dine bookinger
+- Se og annuller dine bookinger
 - Chat oversigt med Fashion Advisors
 
 ## Sådan køres appen

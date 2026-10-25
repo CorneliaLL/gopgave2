@@ -1,5 +1,14 @@
 import { StyleSheet } from 'react-native';
 
+//alle farver samlet et sted, så de kan genbruges i både styling og navigation
+export const Colors = {
+  primary: '#000000',
+  background: '#FFFFFF',
+  inactive: '#B0B0B0',
+  textLight: '#FFFFFF',
+  textGrey: '#555555',
+};
+
 export const GlobalStyles = StyleSheet.create({
     
   //generel baggrund for alle screens
@@ -17,6 +26,28 @@ export const GlobalStyles = StyleSheet.create({
     color: '#000000',
     marginBottom: 16,
     letterSpacing: 1,
+  },
+
+    //header øverst på skærmene (bruges i App.js)
+  header: {
+    backgroundColor: Colors.primary,
+  },
+
+  headerTitle: {
+    color: Colors.textLight,
+    fontSize: 18,
+    fontWeight: '600',
+    letterSpacing: 1,
+  },
+
+  //tab bar i bunden af appen (bruges i App.js)
+  tabBar: {
+    backgroundColor: Colors.background,
+    borderTopWidth: 1,
+    borderTopColor: Colors.primary,
+    height: 60,
+    paddingBottom: 8,
+    paddingTop: 8,
   },
 
   //sort knap med hvid tekst, bruges på oversigt og i chat listen

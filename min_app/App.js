@@ -5,6 +5,7 @@ import Ionicons from '@react-native-vector-icons/ionicons';
 import HomeStack from './navigation/HomeStack';
 import MyBookingsScreen from './screens/MyBookingsScreen';
 import ChatScreen from './screens/ChatScreen';
+import { GlobalStyles, Colors } from './GlobalStyles';
 
 //opretter Tab Navigatoren, som er selve bunden af appen med de tre faner
 const Tab = createBottomTabNavigator();
@@ -26,21 +27,14 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator
-        //screenOptions styrer udseendet for alle faner: sort header og hvid tab bar
-        screenOptions={({ route }) => ({
-          headerStyle: { backgroundColor: '#000000' },
-          headerTitleStyle: { color: '#FFFFFF', fontSize: 18, fontWeight: '600', letterSpacing: 1 },
-          headerTintColor: '#FFFFFF',
-          tabBarStyle: {
-            backgroundColor: '#FFFFFF',
-            borderTopWidth: 1,
-            borderTopColor: '#000000',
-            height: 60,
-            paddingBottom: 8,
-            paddingTop: 8,
-          },
-          tabBarActiveTintColor: '#000000',
-          tabBarInactiveTintColor: '#B0B0B0',
+          screenOptions={({ route }) => ({
+          //farver og styling hentes fra GlobalStyles, så al styling ligger samlet et sted
+          headerStyle: GlobalStyles.header,
+          headerTitleStyle: GlobalStyles.headerTitle,
+          headerTintColor: Colors.textLight,
+          tabBarStyle: GlobalStyles.tabBar,
+          tabBarActiveTintColor: Colors.primary,
+          tabBarInactiveTintColor: Colors.inactive,
 
           //vælger ikon ud fra hvilken fane det er og om den er aktiv
           tabBarIcon: ({ focused, color, size }) => {

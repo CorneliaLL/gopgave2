@@ -6,7 +6,7 @@ En mobilapplikation bygget i React Native (Expo) til booking af tid hos en Fashi
 ## Nyt i G-opgave 2
 - **Kollektion:** knappen "Se nyeste kollektioner" åbner en ny skærm med produkter, der hentes fra et online API
 - **Kategorier og søgning:** kunden kan skifte mellem tasker, sko og smykker og søge efter produkter
-- **Ønskeliste:** kunden kan gemme produkter med "Gem". Ønskelisten gemmes i Firebase Realtime Database
+- **Ønskeliste:** kunden kan gemme produkter med "Gem". Ønskelisten gemmes i  en Firebase Realtime Database
 - **Vedhæft ønskeliste til booking:** i bookingformularen kan kunden vedhæfte sin ønskeliste, som derefter vises på bookingen under "Mine bookinger"
 - **Styling:** farverne til faner og header er flyttet til `GlobalStyles.js` (ud fra feedback i G-opgave 1)
 
